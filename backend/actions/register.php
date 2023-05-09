@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	$name = $validator->sanitize($data['name']);
 	$email = $validator->sanitize($data['email']);
+	$password = $validator->sanitize($data['password']);
 	$confirmPassword = $validator->sanitize($data['conirm_password']);
 	$profile_pic = $_FILES['profile_picture'];
 
@@ -31,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if (empty($password)) {
 		$passwordErr = 'Password is required';
 	} else if (!$validator->validatePassword($password)) {
-		$passwordErr = 'Password must be at least 8 characters long and contain at least one letter and one symbol';
+		$passwordErr = 'Password must be at least 8 characters long and contain at least one letter and one number';
 	}
 
 	if (empty($confirmPassword)) {
@@ -41,11 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
 
 	if (empty($profile_pic)) {
-		$profile_picErr = 'Profile Pictur is reuired';
+		$profile_picErr = 'Profile Picture is reuired';
 	} else if {
 		$profile_pic_validation = $validator->validateFile($profile_pic);
 
-		$profile_picErr = $profile_pic_validation['status'] === 'error' ? $profile_pic_validation['message'];
+		$profile_picErr = $profile_pic_validation['status'] === 'error' ? $profile_pic_validation['message'] : '';
 	}
 
 	if (empty($nameErr) && empty($emailErr) && empty($passwordErr) && empty($confirmPasswordErr) && empty($profile_picErr)) {
@@ -62,5 +63,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	header('Location: ../../register.php');
 }
-
-?>
