@@ -13,7 +13,7 @@ if (isset($_SESSION['errors'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register -Phone Book Application</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css?v=<?php echo time(); ?>">
 </head>
 <body>
     <div class="container">
