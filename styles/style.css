@@ -1,0 +1,17 @@
+* {
+	margin: 5%;
+	border: 2px solid red;
+}
+
+body {
+	background-color: Aliceblue;
+}
+
+form {
+	margin: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+}
