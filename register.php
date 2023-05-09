@@ -30,20 +30,31 @@ if (isset($_SESSION['errors'])) {
 
             <label for="name">Name</label>
             <input type="text" name="name" required>
-
+            <br>
+            <br>
+            
             <label for="email">Email</label>
             <input type="email" name="email">
-
+            <br>
+            <br>
+            
             <label for="profile_picture">Profile Picture</label>
             <input type="file" name="profile_picture" style="margin-bottom: 10px;" name="profile_picture" accept="image/*" required>
+            <br>
+            <br>
 
             <label>Password</label>
             <input type="password" name="password" required>
+            <br>
+            <br>
 
             <label>Password</label>
             <input type="password" name="confirm_password" required>
+            <br>
+            <br>
 
             <button type="submit">Register</button>
+            <br>
 
             <p>Already have an account?<a href="login.php">Login Here</a></p>
         </form>
