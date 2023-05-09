@@ -25,7 +25,7 @@ if (isset($_SESSION['errors'])) {
                 }
             }
         ?>
-        <form method="POST" action="./backend/actions/regiter.php" enctype="multipart/form_data">
+        <form method="POST" action="./backend/actions/register.php" enctype="multipart/form_data">
             <h1>Register</h1>
 
             <label for="name">Name</label>
